@@ -1,0 +1,30 @@
+site_name: Drupal Recipes Documentation
+site_description: Auto-generated documentation for Drupal recipes and related subsystems.
+site_url: https://example.com/drupal-recipes/
+theme:
+  name: material
+  palette:
+    scheme: preference
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+repo_url: https://github.com/drupal/drupal
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: '!!python/name:material.extensions.emoji.twemoji'
+      emoji_generator: '!!python/name:material.extensions.emoji.to_svg'
+plugins:
+  - search
+  - mike:
+      alias_type: redirect
+      canonical_version: latest
+nav:
+  - Home: index.md

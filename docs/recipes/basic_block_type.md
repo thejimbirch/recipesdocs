@@ -1,0 +1,35 @@
+---
+title: Basic block
+recipe: basic_block_type
+source: core/recipes/basic_block_type/recipe.yml
+---
+
+# Basic block
+
+**Machine name:** `basic_block_type`  
+**Source:** `core/recipes/basic_block_type/recipe.yml`
+
+Provides "Basic block" custom block type and related configuration. A basic block contains a title and a body.
+## Type
+
+Block type
+
+## YAML definition
+
+```yaml
+name: 'Basic block'
+description: 'Provides "Basic block" custom block type and related configuration. A basic block contains a title and a body.'
+type: 'Block type'
+install:
+  - block_content
+  - views
+config:
+  strict:
+    # Treat field storages strictly, since they influence the database layout.
+    - field.storage.block_content.body
+  import:
+    block_content:
+      - field.storage.block_content.body
+      - core.entity_view_mode.block_content.full
+      - views.view.block_content
+```

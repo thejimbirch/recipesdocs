@@ -1,0 +1,50 @@
+---
+title: Audio media
+recipe: audio_media_type
+source: core/recipes/audio_media_type/recipe.yml
+---
+
+# Audio media
+
+**Machine name:** `audio_media_type`  
+**Source:** `core/recipes/audio_media_type/recipe.yml`
+
+Provides "Audio" media type and related configuration. A locally hosted audio file.
+## Type
+
+Media type
+
+## YAML definition
+
+```yaml
+name: 'Audio media'
+description: 'Provides "Audio" media type and related configuration. A locally hosted audio file.'
+type: 'Media type'
+install:
+  - image
+  - media_library
+  - path
+  - views
+config:
+  strict:
+    # Treat field storages strictly, since they influence the database layout.
+    - field.storage.media.field_media_audio_file
+  import:
+    file:
+      - views.view.files
+    media_library:
+      - core.entity_view_display.media.audio.media_library
+      - core.entity_view_mode.media.media_library
+      - core.entity_form_mode.media.media_library
+      - image.style.media_library
+      - views.view.media_library
+    media:
+      - core.entity_view_mode.media.full
+      - system.action.media_delete_action
+      - system.action.media_publish_action
+      - system.action.media_save_action
+      - system.action.media_unpublish_action
+      - views.view.media
+    image:
+      - image.style.thumbnail
+```

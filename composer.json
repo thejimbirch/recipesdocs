@@ -133,7 +133,16 @@
             "Drupal\\Composer\\Composer::generateComponentPackages"
         ],
         "phpcs": "phpcs --standard=core/phpcs.xml.dist --parallel=\"$( (nproc || sysctl -n hw.logicalcpu || echo 4) 2>/dev/null)\" --",
-        "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --parallel=\"$( (nproc || sysctl -n hw.logicalcpu || echo 4) 2>/dev/null)\" --"
+        "phpcbf": "phpcbf --standard=core/phpcs.xml.dist --parallel=\"$( (nproc || sysctl -n hw.logicalcpu || echo 4) 2>/dev/null)\" --",
+        "docs:generate": "php scripts/generate-subsystem-docs.php",
+        "mk:docs": [
+            "@docs:generate",
+            "mkdocs build --strict"
+        ],
+        "mk:docs-serve": [
+            "@docs:generate",
+            "mkdocs serve"
+        ]
     },
     "repositories": [
         {

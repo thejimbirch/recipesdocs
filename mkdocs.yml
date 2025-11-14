@@ -1,0 +1,310 @@
+site_name: Drupal Recipes Documentation
+site_description: Auto-generated documentation for Drupal recipes and related subsystems.
+site_url: "https://example.com/drupal-recipes/"
+theme:
+  name: material
+  palette:
+    scheme: preference
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+repo_url: "https://github.com/drupal/drupal"
+markdown_extensions:
+  -
+    toc:
+      permalink: true
+  - admonition
+  - attr_list
+  - pymdownx.snippets
+  - pymdownx.highlight
+  - pymdownx.superfences
+  -
+    pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+plugins:
+  - search
+  -
+    mike:
+      alias_type: redirect
+      canonical_version: latest
+nav:
+  -
+    Home: index.md
+  -
+    Subsystems:
+      -
+        Subsystems Overview: subsystems-overview.md
+      -
+        Config Actions:
+          -
+            Config Actions Overview: config-action/overview.md
+          -
+            ActionMethod: config-action/ActionMethod.md
+          -
+            ConfigAction: config-action/ConfigAction.md
+          -
+            ConfigActionException: config-action/ConfigActionException.md
+          -
+            ConfigActionManager: config-action/ConfigActionManager.md
+          -
+            ConfigActionPluginInterface: config-action/ConfigActionPluginInterface.md
+          -
+            DuplicateConfigActionIdException: config-action/DuplicateConfigActionIdException.md
+          -
+            EntityMethodException: config-action/EntityMethodException.md
+          -
+            CreateForEachBundle: config-action/CreateForEachBundle.md
+          -
+            CreateForEachBundleDeriver: config-action/CreateForEachBundleDeriver.md
+          -
+            EntityCreateDeriver: config-action/EntityCreateDeriver.md
+          -
+            EntityMethodDeriver: config-action/EntityMethodDeriver.md
+          -
+            PermissionsPerBundleDeriver: config-action/PermissionsPerBundleDeriver.md
+          -
+            EntityClone: config-action/EntityClone.md
+          -
+            EntityCreate: config-action/EntityCreate.md
+          -
+            EntityMethod: config-action/EntityMethod.md
+          -
+            PermissionsPerBundle: config-action/PermissionsPerBundle.md
+          -
+            SetProperties: config-action/SetProperties.md
+          -
+            SimpleConfigUpdate: config-action/SimpleConfigUpdate.md
+      -
+        Config Checkpoints:
+          -
+            Config Checkpoints Overview: config-checkpoint/overview.md
+          -
+            Checkpoint: config-checkpoint/Checkpoint.md
+          -
+            CheckpointExistsException: config-checkpoint/CheckpointExistsException.md
+          -
+            CheckpointListInterface: config-checkpoint/CheckpointListInterface.md
+          -
+            CheckpointStorage: config-checkpoint/CheckpointStorage.md
+          -
+            CheckpointStorageInterface: config-checkpoint/CheckpointStorageInterface.md
+          -
+            LinearHistory: config-checkpoint/LinearHistory.md
+          -
+            NoCheckpointsException: config-checkpoint/NoCheckpointsException.md
+          -
+            UnknownCheckpointException: config-checkpoint/UnknownCheckpointException.md
+      -
+        Default Content:
+          -
+            Default Content Overview: default-content/overview.md
+          -
+            AdminAccountSwitcher: default-content/AdminAccountSwitcher.md
+          -
+            ContentExportCommand: default-content/ContentExportCommand.md
+          -
+            ExportMetadata: default-content/ExportMetadata.md
+          -
+            ExportResult: default-content/ExportResult.md
+          -
+            Exporter: default-content/Exporter.md
+          -
+            Finder: default-content/Finder.md
+          -
+            ImportException: default-content/ImportException.md
+          -
+            Importer: default-content/Importer.md
+          -
+            InvalidEntityException: default-content/InvalidEntityException.md
+          -
+            PreEntityImportEvent: default-content/PreEntityImportEvent.md
+          -
+            PreExportEvent: default-content/PreExportEvent.md
+          -
+            PreImportEvent: default-content/PreImportEvent.md
+      -
+        Recipe API:
+          -
+            Recipes API Overview: recipes-api/overview.md
+          -
+            AllowListConfigStorage: recipes-api/AllowListConfigStorage.md
+          -
+            ConfigConfigurator: recipes-api/ConfigConfigurator.md
+          -
+            ConsoleInputCollector: recipes-api/ConsoleInputCollector.md
+          -
+            InputCollectorInterface: recipes-api/InputCollectorInterface.md
+          -
+            InputConfigurator: recipes-api/InputConfigurator.md
+          -
+            InstallConfigurator: recipes-api/InstallConfigurator.md
+          -
+            InvalidConfigException: recipes-api/InvalidConfigException.md
+          -
+            Recipe: recipes-api/Recipe.md
+          -
+            RecipeAppliedEvent: recipes-api/RecipeAppliedEvent.md
+          -
+            RecipeCommand: recipes-api/RecipeCommand.md
+          -
+            RecipeConfigInstaller: recipes-api/RecipeConfigInstaller.md
+          -
+            RecipeConfigStorageWrapper: recipes-api/RecipeConfigStorageWrapper.md
+          -
+            RecipeConfigurator: recipes-api/RecipeConfigurator.md
+          -
+            RecipeFileException: recipes-api/RecipeFileException.md
+          -
+            RecipeInfoCommand: recipes-api/RecipeInfoCommand.md
+          -
+            RecipeInputFormTrait: recipes-api/RecipeInputFormTrait.md
+          -
+            RecipeMissingExtensionsException: recipes-api/RecipeMissingExtensionsException.md
+          -
+            RecipeOverrideConfigStorage: recipes-api/RecipeOverrideConfigStorage.md
+          -
+            RecipePreExistingConfigException: recipes-api/RecipePreExistingConfigException.md
+          -
+            RecipeRunner: recipes-api/RecipeRunner.md
+          -
+            UnknownRecipeException: recipes-api/UnknownRecipeException.md
+  -
+    Recipes:
+      -
+        Recipes in Core Overview: recipes/overview.md
+      -
+        Administrator role: recipes/administrator_role.md
+      -
+        Article comments: recipes/article_comment.md
+      -
+        Article content type: recipes/article_content_type.md
+      -
+        Article tags: recipes/article_tags.md
+      -
+        Audio media: recipes/audio_media_type.md
+      -
+        Basic block: recipes/basic_block_type.md
+      -
+        Basic HTML editor: recipes/basic_html_format_editor.md
+      -
+        Basic shortcuts: recipes/basic_shortcuts.md
+      -
+        Default comments: recipes/comment_base.md
+      -
+        Content editor role: recipes/content_editor_role.md
+      -
+        Content search: recipes/content_search.md
+      -
+        Admin theme: recipes/core_recommended_admin_theme.md
+      -
+        Front end theme: recipes/core_recommended_front_end_theme.md
+      -
+        Recommended Maintenance: recipes/core_recommended_maintenance.md
+      -
+        Recommended Performance: recipes/core_recommended_performance.md
+      -
+        Document media type: recipes/document_media_type.md
+      -
+        Editorial workflow: recipes/editorial_workflow.md
+      -
+        Example: recipes/example.md
+      -
+        Full HTML editor: recipes/full_html_format_editor.md
+      -
+        Image media type: recipes/image_media_type.md
+      -
+        Local video media: recipes/local_video_media_type.md
+      -
+        Basic page: recipes/page_content_type.md
+      -
+        Remote video media: recipes/remote_video_media_type.md
+      -
+        Restricted HTML: recipes/restricted_html_format.md
+      -
+        Standard: recipes/standard.md
+      -
+        Standard Responsive Images: recipes/standard_responsive_images.md
+      -
+        Tags: recipes/tags_taxonomy.md
+      -
+        User pictures: recipes/user_picture.md
+  -
+    Config Actions List:
+      -
+        Config Actions List Overview: config-action/list-overview.md
+      -
+        addNavigationBlock: config-action/actions/plugin-addnavigationblock.md
+      -
+        add_layout_component: config-action/actions/plugin-add-layout-component.md
+      -
+        allowLayoutOverrides: config-action/actions/drupal-layout-builder-entity-layoutbuilderentityviewdisplay-setoverridable.md
+      -
+        create_for_each_bundle: config-action/actions/plugin-create-for-each-bundle.md
+      -
+        disable: config-action/actions/drupal-core-config-entity-configentitybase-disable.md
+      -
+        disableLayoutBuilder: config-action/actions/drupal-layout-builder-entity-layoutbuilderentityviewdisplay-disablelayoutbuilder.md
+      -
+        enable: config-action/actions/drupal-core-config-entity-configentitybase-enable.md
+      -
+        enableLayoutBuilder: config-action/actions/drupal-layout-builder-entity-layoutbuilderentityviewdisplay-enablelayoutbuilder.md
+      -
+        entity_create: config-action/actions/plugin-entity-create.md
+      -
+        entity_method: config-action/actions/plugin-entity-method.md
+      -
+        grantPermission(s): config-action/actions/drupal-user-entity-role-grantpermission.md
+      -
+        hideComponent: config-action/actions/drupal-core-entity-entitydisplaybase-removecomponent.md
+      -
+        setComponent(s): config-action/actions/drupal-core-entity-entitydisplaybase-setcomponent.md
+      -
+        setDefaultValue: config-action/actions/drupal-core-field-fieldconfigbase-setdefaultvalue.md
+      -
+        setDescription: config-action/actions/drupal-core-field-fieldconfigbase-setdescription.md
+      -
+        setDescription: config-action/actions/drupal-media-entity-mediatype-setdescription.md
+      -
+        setDisplaySubmitted: config-action/actions/drupal-node-entity-nodetype-setdisplaysubmitted.md
+      -
+        setFieldMap: config-action/actions/drupal-media-entity-mediatype-setfieldmap.md
+      -
+        setFilterConfig(s): config-action/actions/drupal-filter-entity-filterformat-setfilterconfig.md
+      -
+        setLabel: config-action/actions/drupal-core-field-fieldconfigbase-setlabel.md
+      -
+        setMessage: config-action/actions/drupal-contact-entity-contactform-setmessage.md
+      -
+        setMultiple: config-action/actions/drupal-core-config-entity-configentitybase-set.md
+      -
+        setName: config-action/actions/drupal-language-entity-configurablelanguage-setname.md
+      -
+        setNewRevision: config-action/actions/drupal-node-entity-nodetype-setnewrevision.md
+      -
+        setPreviewMode: config-action/actions/drupal-node-entity-nodetype-setpreviewmode.md
+      -
+        setRecipients: config-action/actions/drupal-contact-entity-contactform-setrecipients.md
+      -
+        setRedirectPath: config-action/actions/drupal-contact-entity-contactform-setredirectpath.md
+      -
+        setRegion: config-action/actions/drupal-block-entity-block-setregion.md
+      -
+        setReply: config-action/actions/drupal-contact-entity-contactform-setreply.md
+      -
+        setRequired: config-action/actions/drupal-core-field-fieldconfigbase-setrequired.md
+      -
+        setSettings: config-action/actions/drupal-core-field-fieldconfigbase-setsettings.md
+      -
+        setStatus: config-action/actions/drupal-core-config-entity-configentitybase-setstatus.md
+      -
+        setTranslatable: config-action/actions/drupal-core-field-fieldconfigbase-settranslatable.md
+      -
+        setWeight: config-action/actions/drupal-contact-entity-contactform-setweight.md
+      -
+        setWeight: config-action/actions/drupal-language-entity-configurablelanguage-setweight.md
+      -
+        setWeight: config-action/actions/drupal-block-entity-block-setweight.md
+      -
+        simpleConfigUpdate: config-action/actions/plugin-simpleconfigupdate.md
