@@ -52,4 +52,4 @@ jobs:
           git config --global user.name "Drupal Docs Bot"
           git config --global user.email "actions@github.com"
           mike deploy --push ${GITHUB_REF_NAME} --allow-empty
-          mike alias latest ${GITHUB_REF_NAME} --update-aliases
+          #mike alias latest ${GITHUB_REF_NAME} --update-aliases
